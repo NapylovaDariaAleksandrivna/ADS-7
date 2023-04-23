@@ -31,10 +31,10 @@ struct SYM {
 
 template <typename T>
 typename TPQueue<T>::Item* TPQueue<T>::create(const T& data) {
-    Item item = new Item;
-    item.data = data;
-    item.next = nullptr;
-    item.last = nullptr;
+    Item* item = new Item;
+    item->data = data;
+    item->next = nullptr;
+    item->last = nullptr;
     return item;
 }
 
